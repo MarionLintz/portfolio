@@ -1,0 +1,80 @@
+.aboutme-containter{
+    margin-top: 15vh;
+    margin-bottom: 20vh;
+
+    .about-me-title{
+        font-size: 2em;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+    }
+
+    .about-me-desc{
+        color: var(--bs-gray-600);
+    }
+
+    .about-me-desc-end{
+        color: var(--bs-primary);
+        font-size: 1em;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    .about-me-subtitle{
+        color: var(--bs-gray-800);
+        font-size: 1em;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+
+        .date{
+            color: var(--bs-primary);
+        }
+    }
+
+    .about-me-detail-title{
+        letter-spacing: 0.1em;
+        color: var(--bs-gray-500);
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 0.8em;
+    }
+
+    .about-me-detail{
+        color: var(--bs-gray-600);
+        font-size: 1em;
+
+        .lighter{
+            color: var(--bs-gray-500);
+        }
+    }
+
+    .skills-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+
+        .skill-container{
+            width: 100px;
+            margin: 0px 20px 0px 0px;
+            text-align: center;
+    
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .skill-icon{
+                color: var(--bs-gray-600);
+                font-size: 50px;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 600px) { 
+    .skills-wrapper{
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+}

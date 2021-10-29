@@ -1,0 +1,13 @@
+.contact-container{
+    height: 50vh;
+
+    .text{
+        color: var(--bs-gray-600);
+        font-size: 1em;
+    }
+    .mail-text{
+        font-size: 4em;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+    }
+}

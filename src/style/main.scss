@@ -1,0 +1,28 @@
+:root {
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-primary: #FF5733;
+    .app-container{
+        max-width: 1080px;
+        margin: 0 auto !important;
+        float: none !important;
+    }
+
+    .not-found-text{
+        letter-spacing: 0.5rem;
+        color: var(--bs-gray-400);
+        text-transform: uppercase;
+        font-size: 15vh;
+    }
+
+    .not-found-detail{
+        color: var(--bs-gray-400);
+        text-transform: uppercase;
+        font-size: 4vh;
+    }
+    
+    .btn-footer-color{
+        color: #495057;
+        background-color: #e9ecef;
+        border-color: #e9ecef;
+    }
+}

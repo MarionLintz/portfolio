@@ -1,0 +1,26 @@
+.page-header{
+    background-color: white;
+
+    .header-text {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 1000px) { 
+    .page-header{
+        position: relative;
+        background-color: white;
+    }
+}
+
+@media (max-width: 600px) { 
+    .page-header{
+        height: 53px;
+        padding: 0 3vw 0 5vw !important;
+        background-color: white;
+        position: relative;
+    }
+}
