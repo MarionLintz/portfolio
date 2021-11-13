@@ -12,7 +12,7 @@ class ProjectsPage extends React.PureComponent<{}, {}> {
                 <iframe src="https://giphy.com/embed/Yj6d4OMmDV3bnYtOow" width="480" height="270" frameBorder="0" allowFullScreen></iframe>
                 <p style={{fontSize: "10px"}}><a href="https://giphy.com/gifs/CBeebiesHQ-painting-diy-Yj6d4OMmDV3bnYtOow">via GIPHY</a></p>
 
-                <p className="project-detail"> Résumé des projets :  </p>
+                <p className="project-detail"> En attendant que cette page soit complète, voici un résumé de mes projets :  </p>
 
                 <p className="mb-0 fw-bold">[Projet école d'ingénieurs] Application de gestion de Stock et Comptabilité, intégré à un ERP pour association étudiante </p>
                 <p className="mb-0">Frontend : React, CoreUI, Axios / Backend : Node.js, fastify, prisma / Tests : cucumber</p>
