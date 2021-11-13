@@ -9,5 +9,9 @@ export const headerData: HeaderData = {
     {
         name: 'Me contacter',
         link: '/contact'
+    },
+    {
+        name: 'Mes projets',
+        link: '/projects'
     }],
 }
