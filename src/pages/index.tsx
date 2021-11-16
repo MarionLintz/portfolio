@@ -1,9 +1,10 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
-import Fade from 'react-awesome-reveal';
+import Fade, { AttentionSeeker } from 'react-awesome-reveal';
 import Layout from '../components/Layout';
 import { homeData } from '../mock/home';
 import '../style/index.scss'
+import { FaArrowCircleRight } from 'react-icons/fa';
 
 class IndexPage extends React.PureComponent<{}, {}>{
 
@@ -25,7 +26,6 @@ class IndexPage extends React.PureComponent<{}, {}>{
                 <p className="text-center"> { home.presentation_title }</p>
                 <p className="text-center mb-3"> { home.presentation }</p>
                 <p className="text-center mb-5"> { home.presentation_end }</p>
-                <Button href="/aboutme" variant="outline-light">Me découvrir</Button>
               </Fade>
             </Col>
           </Row>
@@ -91,9 +91,9 @@ class IndexPage extends React.PureComponent<{}, {}>{
               </div> 
             </Fade>
             <Col md={12} sm={12} className="d-flex justify-content-center mt-3">
-              <Fade delay={50} duration={1000}>
-                <Button href="/aboutme" className="btn-footer-color">Voir mon CV</Button>
-              </Fade>
+              <AttentionSeeker effect="wobble" delay={500} duration={2000}>
+                <Button href="/aboutme" className="btn-footer-color">Voir mon CV <FaArrowCircleRight/></Button>
+              </AttentionSeeker>
             </Col>
           </Row>
         </Container>

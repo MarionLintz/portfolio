@@ -4,12 +4,13 @@ import Image from 'react-bootstrap/Image';
 
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import '../style/aboutme.scss'
-import Fade from 'react-awesome-reveal';
+import {AttentionSeeker, Fade} from 'react-awesome-reveal';
 
 import cover from '../images/about-me-min.png';
 import parse from 'html-react-parser';
 import { aboutData } from '../mock/aboutme';
 import { BsBoxArrowUpRight } from 'react-icons/bs';
+import { FaArrowCircleRight } from 'react-icons/fa';
 
 
 class AboutMePage extends React.PureComponent<{}, {}>{
@@ -141,9 +142,15 @@ class AboutMePage extends React.PureComponent<{}, {}>{
                   }
                 </Row>
               </Container>
-
-              
             </div>
+
+            <Row>
+              <Col md={12} sm={12} className="d-flex justify-content-center mt-3">
+                <AttentionSeeker effect="wobble" delay={500} duration={2000}>
+                  <Button href="/projects" className="btn-footer-color"> Voir mes projets <FaArrowCircleRight/></Button>
+                </AttentionSeeker>
+              </Col>
+            </Row>
           </div>
         </Container>
       </Layout>
