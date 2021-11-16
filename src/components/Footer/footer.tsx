@@ -4,12 +4,9 @@ import { RiChatSmile3Line } from "react-icons/ri";
 import { FaCopyright } from "react-icons/fa";
 
 import './footer.scss';
-import PortfolioContext from '../../context/context';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 
-const Footer = () => {
-  const { footer } = useContext(PortfolioContext);
-
+function Footer() {
   return (
     <div className="footer-container">
       <div className="contact-me-card shadow-sm rounded p-5">

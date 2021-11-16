@@ -5,7 +5,7 @@ import { Container, Nav } from 'react-bootstrap';
 import { Url } from '../../interfaces.ts/interfaces';
 import './header.scss';
 
-const Header = () => {
+function Header() {
   const { header } = useContext(PortfolioContext);
   
   return (
