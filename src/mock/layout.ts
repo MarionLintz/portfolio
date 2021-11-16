@@ -7,11 +7,12 @@ export const headerData: HeaderData = {
         link: '/aboutme'
     },
     {
-        name: 'Me contacter',
-        link: '/contact'
-    },
-    {
         name: 'Mes projets',
         link: '/projects'
-    }],
+    },
+    {
+        name: 'Me contacter',
+        link: '/contact'
+    }
+],
 }

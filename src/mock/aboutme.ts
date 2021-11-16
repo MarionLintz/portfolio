@@ -266,7 +266,7 @@ export const aboutData: any = {
         {
             img: sport,
             title: "Sport",
-            text: "Randonnée, musculation, course"
+            text: "Randonnée, musculation, course à pied"
         },
         {
             img: voyage,
