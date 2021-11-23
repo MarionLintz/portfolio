@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import HoverCard, { CardItem } from '../components/HoverCard/HoverCard';
+import { Container } from 'react-bootstrap';
 import Layout from '../components/Layout';
-import { projectsData } from '../mock/projects';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import '../style/projects.scss'
+import ProjectCard from '../components/ProjectCard/ProjectCard';
+import { projectList } from '../mock/projects';
 
 function ProjectsPage(){
   const [show, setVisibility] = useState(false);
@@ -20,19 +20,26 @@ function ProjectsPage(){
       <Container className="mt-5 pt-5 mb-5">
         <div className="grid-projects">
             {
-              projectsData.projectList.map((item, key) => (
-                <HoverCard onClick={(e) => handleCardClick(e, item)} cardItem={item}/>
+              projectList.map((item, key) => (
+                <ProjectCard onClick={(e) => handleCardClick(e, item)} item={item} key={key}/>
               ))
             }
         </div>
 
         <Offcanvas show={show} onHide={() => setVisibility(false)} placement="end" restoreFocus={false}>
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title>{projectClickedDetail.title}</Offcanvas.Title>
+          <Offcanvas.Header closeButton className="p-0">
+            <p className="mb-0">Détails</p>
+            <hr className="mb-4"/>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            Some text as placeholder. In real life you can have the elements you
-            have chosen. Like, text, images, lists, etc.
+            <Offcanvas.Title className="offcanvas-title">{projectClickedDetail.projectInfo?.title}</Offcanvas.Title>
+            <p className="offcanvas-subtitle mb-0"> {projectClickedDetail.projectInfo?.subTitle} </p>
+            
+            <div className="mt-3">
+              {
+                projectClickedDetail.component && <projectClickedDetail.component/>
+              }
+            </div>
           </Offcanvas.Body>
       </Offcanvas>
       </Container>

@@ -1,4 +1,42 @@
 .grid-projects{
     column-count: 2;
-    column-gap: 3rem;
+    column-gap: 2rem;
+}
+
+@media (max-width: 800px) { 
+    .grid-projects{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .offcanvas-end{
+        width: 100% !important;
+    }
+}
+
+.offcanvas-end{
+    width: 70%;
+}
+
+.offcanvas{
+    .offcanvas-header{
+        margin: 15px;
+        border-bottom: 1px solid lightgray;
+    }
+
+    .offcanvas-title{
+        font-size: 1.5em;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    .offcanvas-subtitle{
+        font-size: 1em;
+        color: gray;
+    }
+
+    .section-title{
+        font-size: 2em;
+        font-weight: 200;
+    }
 }

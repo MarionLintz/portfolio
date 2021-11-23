@@ -1,6 +1,6 @@
 // HEAD DATA
 export const headData = {
-    pageTitle: 'Marion Lintz | Chef de projet IT', 
+    pageTitle: 'Marion Lintz | Ingénieure logiciel', 
     title: 'Marion Lintz', 
     lang: 'fr', 
   };

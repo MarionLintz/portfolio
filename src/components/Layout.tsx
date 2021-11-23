@@ -24,7 +24,7 @@ function Layout({children}: any) {
             <meta charSet="utf-8" />
             <meta name="description" content="Bonjour, je suis Marion ! Bienvenue, je vous invite à découvrir mon univers, mes projets et les solutions que je pourrais apporter à votre entreprise."/>
             <meta name="author" content="Marion Lintz"/>
-            <meta name="keywords" content="Marion, Lintz, Chef de Projet, Informatique, Ingénieur, Strasbourg"/>
+            <meta name="keywords" content="Marion, Lintz, Chef de Projet, Ingénieur logiciel, Informatique, Ingénieur, Strasbourg"/>
             <meta name="robots" content="index"/>
             <title>{pageTitle}</title>
             <html lang={lang} />
