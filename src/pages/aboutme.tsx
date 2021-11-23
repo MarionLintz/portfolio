@@ -15,7 +15,7 @@ import { FaArrowCircleRight } from 'react-icons/fa';
 
 function AboutMePage(){
   const about = aboutData;
-  const [width, setWidth] = useState<number>(window.innerWidth);
+  const [width, setWidth] = useState<number>(1000);
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
