@@ -50,23 +50,23 @@ class AboutMePage extends React.PureComponent<{}, {}>{
                   {about.lang_title}
                 </p>
                 {
-                  about.lang.map((item: any) => {
-                    return  <p className="about-me-detail-title ms-3"> <u>{item.title}</u> {item.text}</p>
+                  about.lang.map((item: any, key:number) => {
+                    return  <p key={key} className="about-me-detail-title ms-3"> <u>{item.title}</u> {item.text}</p>
                   })
                 }
               </div>
             </Fade>
             <Fade delay={50} duration={1000}>
                 {
-                  about.skills.map((item: any) => {
-                    return <div className="mt-5">
+                  about.skills.map((item: any, key:number) => {
+                    return <div key={key} className="mt-5">
                       <p className="about-me-subtitle mb-0"> 
                         {item.title}
                       </p>
                       <div className="skills-wrapper my-4">
                         {
-                          item.items.map((skill: any) => {
-                            return <div className="skill-container">
+                          item.items.map((skill: any, key:number) => {
+                            return <div className="skill-container" key={key}>
                               <skill.icon className="skill-icon"/>
                               <p className="about-me-detail mt-2"> {skill.title} </p>
                             </div>

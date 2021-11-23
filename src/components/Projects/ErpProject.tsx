@@ -1,10 +1,10 @@
 import React from "react";
 import { Badge, Col, Row } from "react-bootstrap";
 import './../ProjectCard/project-card.scss'
-import screenErp from '../../images/screen_erp.png';
 import Image from 'react-bootstrap/Image'
 import { erpInfo } from "../../mock/projects";
 
+import screenErp from '../../images/screen_erp.png';
 import screenErp1 from '../../images/screen_erp.png';
 import screenErp2 from '../../images/screen_erp_2.png';
 import screenErp3 from '../../images/screen_erp_3.png';

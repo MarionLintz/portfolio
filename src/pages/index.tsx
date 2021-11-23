@@ -36,7 +36,7 @@ class IndexPage extends React.PureComponent<{}, {}>{
               </Fade>
             </Col>
             {home.qualities.map((item: any, index: number) => {
-              return <Col md={4} sm={6} className="pt-5 d-flex justify-content-center">
+              return <Col md={4} sm={6} className="pt-5 d-flex justify-content-center" key={index}>
                 <Fade delay={50} duration={1000}>
                   <div className="qualities-container">
                     <item.icon className="qualities-icon"/>

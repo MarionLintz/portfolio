@@ -4,11 +4,39 @@ import Layout from '../components/Layout';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import '../style/projects.scss'
 import ProjectCard from '../components/ProjectCard/ProjectCard';
-import { projectList } from '../mock/projects';
+import { Project, SmartServiceInfo, erpInfo, patrimoineInfo, nuitDeLinfoInfo, FinEtudeInfo } from '../mock/projects';
+import SmartServiceProject from '../components/Projects/SmartServiceProject';
+import ErpProject from '../components/Projects/ErpProject';
+import PatrimoineProject from '../components/Projects/PatrimoineProject';
+import NuitDeLinfoProject from '../components/Projects/NuitDeLinfoProject';
+import FinEtudeProject from '../components/Projects/FinEtudeProject';
 
 function ProjectsPage(){
   const [show, setVisibility] = useState(false);
   const [projectClickedDetail, setClickDetail] = useState<any>({});
+
+  const projectList : Project[] =[
+    {
+        projectInfo: SmartServiceInfo,
+        component: SmartServiceProject
+    },
+    {
+        projectInfo: erpInfo,
+        component: ErpProject
+    },
+    {
+        projectInfo: patrimoineInfo,
+        component: PatrimoineProject
+    },
+    {
+        projectInfo: nuitDeLinfoInfo,
+        component: NuitDeLinfoProject
+    },
+    {
+        projectInfo: FinEtudeInfo,
+        component: FinEtudeProject
+    }
+];
 
   const handleCardClick = (e: any, projectConcerned: any) => {
     setVisibility(true);

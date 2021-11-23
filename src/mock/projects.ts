@@ -1,8 +1,3 @@
-import ErpProject from '../components/Projects/erpProject';
-import FinEtudeProject from '../components/Projects/FinEtudeProject';
-import NuitDeLinfoProject from '../components/Projects/NuitDeLinfoProject';
-import PatrimoineProject from '../components/Projects/PatrimoineProject';
-import SmartServiceProject from '../components/Projects/SmartServiceProject';
 import screenErp from '../images/screen_erp.png';
 
 export interface ProjectInfo {
@@ -59,25 +54,3 @@ export const FinEtudeInfo: ProjectInfo = {
     imageUrl: "https://cdn.pixabay.com/photo/2016/09/16/19/16/hat-1674894_960_720.png"    
 }
 
-export const projectList : Project[] =[
-    {
-        projectInfo: SmartServiceInfo,
-        component: SmartServiceProject
-    },
-    {
-        projectInfo: erpInfo,
-        component: ErpProject
-    },
-    {
-        projectInfo: patrimoineInfo,
-        component: PatrimoineProject
-    },
-    {
-        projectInfo: nuitDeLinfoInfo,
-        component: NuitDeLinfoProject
-    },
-    {
-        projectInfo: FinEtudeInfo,
-        component: FinEtudeProject
-    }
-];

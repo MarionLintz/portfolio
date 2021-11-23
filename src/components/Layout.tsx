@@ -8,8 +8,10 @@ import { headerData } from '../mock/layout';
 import { Helmet } from 'react-helmet';
 import Header from './Header/header';
 import Footer from './Footer/footer';
+
 import logo from './../images/logo.svg';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/main.scss';
 
 function Layout({children}: any) {
