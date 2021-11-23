@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import Layout from '../components/Layout';
 import Offcanvas from 'react-bootstrap/Offcanvas';
@@ -10,6 +10,7 @@ import ErpProject from '../components/Projects/ErpProject';
 import PatrimoineProject from '../components/Projects/PatrimoineProject';
 import NuitDeLinfoProject from '../components/Projects/NuitDeLinfoProject';
 import FinEtudeProject from '../components/Projects/FinEtudeProject';
+import { Fade } from 'react-awesome-reveal';
 
 function ProjectsPage(){
   const [show, setVisibility] = useState(false);
@@ -49,7 +50,9 @@ function ProjectsPage(){
         <div className="grid-projects">
             {
               projectList.map((item, key) => (
-                <ProjectCard onClick={(e) => handleCardClick(e, item)} item={item} key={key}/>
+                <Fade delay={200 + 150*key} duration={1000} triggerOnce={true}>  
+                  <ProjectCard onClick={(e) => handleCardClick(e, item)} item={item} key={key}/>
+                </Fade>
               ))
             }
         </div>
@@ -76,29 +79,3 @@ function ProjectsPage(){
 }
 
 export default ProjectsPage;
-
-{/* <div className="d-flex align-items-center flex-column">
-    <p className="project-title"> Work In Progress </p>
-    <iframe src="https://giphy.com/embed/Yj6d4OMmDV3bnYtOow" width="480" height="270" frameBorder="0" allowFullScreen></iframe>
-    <p style={{fontSize: "10px"}}><a href="https://giphy.com/gifs/CBeebiesHQ-painting-diy-Yj6d4OMmDV3bnYtOow">via GIPHY</a></p>
-
-    <p className="project-detail"> En attendant que cette page soit complète, voici un résumé de mes projets :  </p>
-
-    <p className="mb-0 fw-bold">[Projet école d'ingénieurs] Application de gestion de Stock et Comptabilité, intégré à un ERP pour association étudiante </p>
-    <p className="mb-0">Frontend : React, CoreUI, Axios / Backend : Node.js, fastify, prisma / Tests : cucumber</p>
-    <p>Mon rôle : développement frontend </p> 
-
-    <p className="mb-0 fw-bold">[Projet école d'ingénieurs] Application de gestion de patrimoine</p>
-    <p className="mb-0">Objectif : prise en main de la méthode TDD</p>
-    <p className="">Client Lourd WinFrom, application serveur .NET Framework 5.0, projet de test xUnit</p>
-
-    <p className="mb-0 fw-bold">[Incotec] Développement d'un module de note de frais intégré à une application existante</p>
-    <p className="">ASP.NET MVC / Angular</p>
-
-    <p className="mb-0 fw-bold">[Incotec] Réécriture de l'application mobile</p>
-    <p className="mb-0">ASP.NET MVC / Ionic => publication AppStore et PlayStore</p>
-    <a className="mb-3" href="https://www.incotec-software.com/actualites/gestion-des-temps/smartservice-la-seule-application-mobile-dediee-la-gestion-des-temps">Voir l'article</a>
-
-    <p className="mb-0 fw-bold">[Incotec : projet de fin d'étude] Développement d'un nouveau module Incovar+</p>
-    <p className="mb-3">ASP.NET MVC / Angular / TDD</p>
-</div> */}
