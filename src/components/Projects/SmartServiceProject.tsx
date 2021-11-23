@@ -1,10 +1,9 @@
 import React from "react";
-import { Accordion, Badge, Card, Col, Row } from "react-bootstrap";
+import { Badge, Col, Row } from "react-bootstrap";
 import Image from 'react-bootstrap/Image'
 import './../ProjectCard/project-card.scss'
 
 import smartservice from '../../images/smartservice.png';
-import { SmartServiceInfo } from "../../mock/projects";
 
 function SmartServiceProject(props: any) : JSX.Element{
     return <Row>

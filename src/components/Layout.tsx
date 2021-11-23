@@ -8,6 +8,7 @@ import { headerData } from '../mock/layout';
 import { Helmet } from 'react-helmet';
 import Header from './Header/header';
 import Footer from './Footer/footer';
+import logo from './../images/logo.svg';
 
 import '../style/main.scss';
 
@@ -26,6 +27,7 @@ function Layout({children}: any) {
             <meta name="author" content="Marion Lintz"/>
             <meta name="keywords" content="Marion, Lintz, Chef de Projet, Ingénieur logiciel, Informatique, Ingénieur, Strasbourg"/>
             <meta name="robots" content="index"/>
+            <link rel = "icon" type = "image/png" href={logo} />
             <title>{pageTitle}</title>
             <html lang={lang} />
         </Helmet>
