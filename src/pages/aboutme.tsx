@@ -43,7 +43,7 @@ function AboutMePage(){
         </div>
 
         <div className="about-me-presentation m-1 pt-5">
-          <Fade delay={1800} duration={1000}>
+          <Fade delay={1800} duration={1000} triggerOnce={true}>
             <p className="about-me-title">
               {about.skills_title}
             </p>
@@ -69,7 +69,7 @@ function AboutMePage(){
                   </p>
                 </Fade>
                 <div className="skills-wrapper my-4">
-                  <Fade cascade duration={400}>
+                  <Fade cascade duration={400} triggerOnce={true}>
                   {
                     item.items.map((skill: any, key:number) => {
                       return <div className="skill-container" key={key}>
@@ -89,14 +89,14 @@ function AboutMePage(){
           {
             about.xp.map((xp: any) => {
               return <>
-              <Fade delay={50} duration={1000}>
+              <Fade delay={50} duration={1000} triggerOnce={true}>
                 <p className="about-me-title mt-5">
                   {xp.title}
                 </p>
               </Fade>
               {
                 xp.detail.map((detail: any) => {
-                  return <Fade delay={50} duration={1000}>
+                  return <Fade delay={50} duration={1000} triggerOnce={true}>
                     <div className="mt-3">
                       <p className="about-me-subtitle mb-0"> 
                         {detail.title} <span className="date">{detail.date}</span>
@@ -125,7 +125,7 @@ function AboutMePage(){
           }
         
           <div className="about-me-presentation pt-5">
-            <Fade delay={50} duration={1000}>
+            <Fade delay={50} duration={1000} triggerOnce={true}>
               <p className="about-me-title">
                 {about.interest_title}
               </p>
@@ -135,7 +135,7 @@ function AboutMePage(){
                 {
                   about.interests.map((interest: any, index: number) => {
                     return <Col md={6} sm={12}>
-                    <Slide delay={50} duration={2000} direction={index == 0 || index == 2 ? "left" : "right"}>
+                    <Slide delay={50} duration={2000} direction={index == 0 || index == 2 ? "left" : "right"} triggerOnce={true}>
                       <Card style={{ width: '100%' }} className="my-3">
                         <Card.Img variant="top" src={interest.img} />
                         <Card.Body className="text-center">
@@ -153,7 +153,7 @@ function AboutMePage(){
 
           <Row>
             <Col md={12} sm={12} className="d-flex justify-content-center mt-3">
-              <AttentionSeeker effect="wobble" delay={500} duration={2000}>
+              <AttentionSeeker effect="wobble" delay={2000} duration={2000}>
                 <Button href="/projects" className="btn-footer-color"> Voir mes projets <FaArrowCircleRight/></Button>
               </AttentionSeeker>
             </Col>
