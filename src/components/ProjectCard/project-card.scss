@@ -3,9 +3,40 @@
     break-inside: avoid;
     padding: 10px;
     cursor: pointer;
-    
+
     .card-img{
         border-radius: 10px !important;
+    }
+}
+
+
+@media(max-width: 800px){
+    .card-hover{
+        border: 0px !important;
+    
+        .card-img{
+            border-radius: 10px !important;
+            filter: brightness(50%);
+            -webkit-filter: brightness(50%);
+            -moz-filter: brightness(50%);
+        }
+    
+        .card-text{
+            color: white;
+            top: auto;
+            padding: 1.5em !important;
+    
+            .card-title{
+                font-size: 1.2em;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+        }
+    
+        .badge-custom{
+            background-color: var(--bs-primary) !important;
+            border-radius: 10px;
+        }
     }
 }
 

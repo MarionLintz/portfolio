@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
 import Image from 'react-bootstrap/Image';
 
@@ -15,27 +15,41 @@ import { FaArrowCircleRight } from 'react-icons/fa';
 
 function AboutMePage(){
   const about = aboutData;
+  const [width, setWidth] = useState<number>(window.innerWidth);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  
+  useEffect(() => {
+      window.addEventListener('resize', handleWindowSizeChange);
+      return () => {
+          window.removeEventListener('resize', handleWindowSizeChange);
+      }
+  }, []);
+
+  let isMobile: boolean = (width <= 768);
 
   return (
     <Layout>
       <Container className="aboutme-containter">
-        <Slide direction="up" delay={500} duration={2000} triggerOnce={true}>
-          <Fade duration={4000} triggerOnce={true}>
+        <Slide direction={isMobile ? "down" : "up"} delay={isMobile ? 0 : 500} duration={1000} triggerOnce={true}>
+          <Fade duration={isMobile ? 1000 : 3000} triggerOnce={true}>
             <Image className="lazy-img" alt="aboutme" src={cover} fluid></Image>
           </Fade>
         </Slide>
         <div className="about-me-presentation m-1 pt-3">
-          <Fade delay={1600} duration={1000} triggerOnce={true}>
+          <Fade delay={isMobile ? 0 : 1000} duration={1000} triggerOnce={true}>
             <p className="about-me-title">
               {about.title}
             </p>
           </Fade>
-          <Fade delay={1300} duration={1000} triggerOnce={true}>
+          <Fade delay={isMobile ? 0 : 800} duration={1000} triggerOnce={true}>
             <p className="about-me-desc"> 
               {about.presentation}
             </p>
           </Fade>
-          <Fade delay={800} duration={1000} triggerOnce={true}>
+          <Fade delay={isMobile ? 0 : 600} duration={1000} triggerOnce={true}>
             <p className="about-me-desc-end">
               {about.end_presentation}
             </p>
@@ -43,33 +57,35 @@ function AboutMePage(){
         </div>
 
         <div className="about-me-presentation m-1 pt-5">
-          <Fade delay={1800} duration={1000} triggerOnce={true}>
+          <Fade delay={isMobile ? 0 : 1000} duration={1000} triggerOnce={true}>
             <p className="about-me-title">
               {about.skills_title}
             </p>
           </Fade>
 
-          <div className="mt-5">
-            <p className="about-me-subtitle"> 
-              {about.lang_title}
-            </p>
-            {
-              about.lang.map((item: any, key:number) => {
-                return  <p key={key} className="about-me-detail-title ms-3"> <u>{item.title}</u> {item.text}</p>
-              })
-            }
-          </div>
+          <Fade delay={isMobile ? 0 : 1200} duration={1000} triggerOnce={true}>
+            <div className="mt-5">
+              <p className="about-me-subtitle"> 
+                {about.lang_title}
+              </p>
+              {
+                about.lang.map((item: any, key:number) => {
+                  return  <p key={key} className="about-me-detail-title ms-3"> <u>{item.title}</u> {item.text}</p>
+                })
+              }
+            </div>
+          </Fade>
 
           {
             about.skills.map((item: any, key:number) => {
               return <div key={key} className="mt-5">
-                <Fade>
+                <Fade duration={isMobile ? 0 : 100} triggerOnce={true}>
                   <p className="about-me-subtitle mb-0"> 
                     {item.title}
                   </p>
                 </Fade>
                 <div className="skills-wrapper my-4">
-                  <Fade cascade duration={400} triggerOnce={true}>
+                  <Fade cascade duration={isMobile ? 0 : 200} triggerOnce={true}>
                   {
                     item.items.map((skill: any, key:number) => {
                       return <div className="skill-container" key={key}>
@@ -135,7 +151,7 @@ function AboutMePage(){
                 {
                   about.interests.map((interest: any, index: number) => {
                     return <Col md={6} sm={12}>
-                    <Slide delay={50} duration={2000} direction={index == 0 || index == 2 ? "left" : "right"} triggerOnce={true}>
+                    <Slide delay={50} duration={isMobile ? 500 : 1000} direction={index == 0 || index == 2 ? "left" : "right"} triggerOnce={true}>
                       <Card style={{ width: '100%' }} className="my-3">
                         <Card.Img variant="top" src={interest.img} />
                         <Card.Body className="text-center">
@@ -153,7 +169,7 @@ function AboutMePage(){
 
           <Row>
             <Col md={12} sm={12} className="d-flex justify-content-center mt-3">
-              <AttentionSeeker effect="wobble" delay={2000} duration={2000}>
+              <AttentionSeeker effect="wobble" delay={isMobile ? 500 : 1000} duration={2000}>
                 <Button href="/projects" className="btn-footer-color"> Voir mes projets <FaArrowCircleRight/></Button>
               </AttentionSeeker>
             </Col>

@@ -41,7 +41,7 @@ function IndexPage(){
           </Col>
           {home.qualities.map((item: any, index: number) => {
             return <Col md={4} sm={6} className="pt-5 d-flex justify-content-center" key={index}>
-              <Slide duration={1000} direction={index == 2 || index == 5 ? "left": index == 0 || index == 5 ? "up" : "right"}>
+              <Slide triggerOnce={true} duration={1000} direction={index == 2 || index == 5 ? "left": index == 0 || index == 5 ? "up" : "right"}>
                 <div className="qualities-container">
                   <item.icon className="qualities-icon"/>
                   <p className="qualities-name pt-5">{item.title}</p>
