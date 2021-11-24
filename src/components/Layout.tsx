@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { PortfolioProvider } from '../context/context';
-import { HeaderData } from '../interfaces.ts/interfaces';
 import { headData } from '../mock/global';
-import { headerData } from '../mock/layout';
 
 import { Helmet } from 'react-helmet';
 import Header from './Header/header';
@@ -16,10 +13,6 @@ import '../style/main.scss';
 
 function Layout({children}: any) {
     const { pageTitle, lang } = headData;
-    const [header, setHeader] = useState<HeaderData>(headerData);
-    useEffect(() => {
-      setHeader(headerData);
-    }, []);
 
     return (
       <>
@@ -33,13 +26,11 @@ function Layout({children}: any) {
             <title>{pageTitle}</title>
             <html lang={lang} />
         </Helmet>
-        <PortfolioProvider value={{ header }}>
-          <Header />
-          <div className="app-container">
+        <Header />
+          <main className="app-container">
             {children}
-          </div>
-          <Footer />
-        </PortfolioProvider>
+          </main>
+        <Footer />
       </>
     );
 }

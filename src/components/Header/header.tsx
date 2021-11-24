@@ -1,12 +1,16 @@
 import React, { useContext, useEffect, useState } from 'react';
-import PortfolioContext from '../../context/context';
 import Navbar from 'react-bootstrap/Navbar'
 import { Container, Nav } from 'react-bootstrap';
-import { Url } from '../../interfaces.ts/interfaces';
+import { HeaderData, Url } from '../../interfaces.ts/interfaces';
 import './header.scss';
+import { headerData } from '../../mock/layout';
 
 function Header() {
-  const { header } = useContext(PortfolioContext);
+  const [header, setHeader] = useState<HeaderData>(headerData);
+
+  useEffect(() => {
+    setHeader(headerData);
+  }, []);
   
   return (
     <Navbar fixed="top" collapseOnSelect expand="lg" className="page-header">

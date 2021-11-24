@@ -16,6 +16,14 @@ function ProjectsPage(){
   const [show, setVisibility] = useState(false);
   const [projectClickedDetail, setClickDetail] = useState<any>({});
 
+  useEffect(() => {
+    window.history.pushState(null, "", window.location.pathname);
+    window.addEventListener('popstate', (e) => {
+        setVisibility(false);
+        setClickDetail({});
+    });
+  }, [])
+
   const projectList : Project[] =[
     {
         projectInfo: SmartServiceInfo,
@@ -50,14 +58,14 @@ function ProjectsPage(){
         <div className="grid-projects">
             {
               projectList.map((item, key) => (
-                <Fade delay={200 + 150*key} duration={1000} triggerOnce={true}>  
-                  <ProjectCard onClick={(e) => handleCardClick(e, item)} item={item} key={key}/>
+                <Fade delay={200 + 150*key} key={key} duration={1000} triggerOnce={true}>  
+                  <ProjectCard onClick={(e) => handleCardClick(e, item)} item={item}/>
                 </Fade>
               ))
             }
         </div>
 
-        <Offcanvas show={show} onHide={() => setVisibility(false)} placement="end" restoreFocus={false}>
+        <Offcanvas show={show} onHide={() => {setVisibility(false);}} placement="end" restoreFocus={false}>
           <Offcanvas.Header closeButton className="p-0">
             <p className="mb-0">Détails</p>
             <hr className="mb-4"/>

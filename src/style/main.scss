@@ -1,10 +1,9 @@
 :root {
     --bs-body-font-family: var(--bs-font-sans-serif);
     --bs-primary: #FF5733;
+
     .app-container{
-        max-width: 1080px;
-        margin: 0 auto !important;
-        float: none !important;
+        flex: 1;
     }
 
     .not-found-text{
@@ -38,4 +37,10 @@
         background-color: #e9ecef;
         border-color: #e9ecef;
     }
+}
+
+body > div > #gatsby-focus-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }

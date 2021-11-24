@@ -8,7 +8,7 @@ import { SiGithub, SiLinkedin } from 'react-icons/si';
 
 function Footer() {
   return (
-    <div className="footer-container">
+    <footer className="footer-container">
       <div className="contact-me-card shadow-sm rounded p-5">
         <p className="mb-0"> Une question ? Envie d'en savoir plus ? Je serai ravie de vous répondre <RiChatSmile3Line/></p>
         <Button href="/contact" variant="outline-light">
@@ -28,7 +28,7 @@ function Footer() {
           <a href="/legal"><u>Mentions légales</u></a>
         </p>
       </div>
-    </div>    
+    </footer>    
   );
 };
 
