@@ -3,7 +3,7 @@ import { Badge, Col, Row } from "react-bootstrap";
 import './../ProjectCard/project-card.scss'
 import screenErp from '../../images/screen_erp.png';
 import Image from 'react-bootstrap/Image'
-import { patrimoineInfo } from "../../mock/projects";
+import { PatrimoineInfo } from "../../mock/projects";
 
 
 function PatrimoineProject(props: any) : JSX.Element{
@@ -47,7 +47,7 @@ function PatrimoineProject(props: any) : JSX.Element{
             </Col>
             <Col md={12}>
             {
-                patrimoineInfo.languages.map((element: any, key: any) => (
+                PatrimoineInfo.languages.map((element: any, key: any) => (
                     <Badge key={key} bg="secondary" className="me-1 p-2">{element}</Badge>
                 ))
             }

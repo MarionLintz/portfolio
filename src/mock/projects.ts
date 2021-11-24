@@ -12,21 +12,21 @@ export interface Project {
     component: (props: any) => JSX.Element
 }
 
-export const erpInfo: ProjectInfo = {
+export const ErpInfo: ProjectInfo = {
     title: "Application de gestion de stock et comptabilité",
     subTitle: "ERP à destination des associations étudiante",
     languages: ["React", "TypeScript",  "NodeJs", "Fastify", "Prisma"],
     imageUrl: screenErp,
 }
 
-export const nuitDeLinfoInfo: ProjectInfo = {
+export const NuitDeLinfoInfo: ProjectInfo = {
     title: "Nuit de l'info 20221",
     subTitle : "A venir ... compétition développement",
     languages: [],
     imageUrl: "https://pbs.twimg.com/media/FDXXXtOWQAEmXVg.png"
 }
 
-export const patrimoineInfo: ProjectInfo = {
+export const PatrimoineInfo: ProjectInfo = {
     title: "Application de gestion de patrimoine",
     subTitle: "Mise en pratique de la méthode TDD",
     languages: ["Client lourd WinForm", ".NET Framework 5.0",  "xUnit", "C#"],

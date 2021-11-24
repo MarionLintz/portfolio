@@ -2,7 +2,7 @@ import React from "react";
 import { Badge, Col, Row } from "react-bootstrap";
 import './../ProjectCard/project-card.scss'
 import Image from 'react-bootstrap/Image'
-import { erpInfo } from "../../mock/projects";
+import { ErpInfo } from "../../mock/projects";
 
 import screenErp from '../../images/screen_erp.png';
 import screenErp1 from '../../images/screen_erp.png';
@@ -42,7 +42,7 @@ function ErpProject(props: any) : JSX.Element{
             </Col>
             <Col md={12}>
                 {
-                    erpInfo.languages.map((element: any, key: any) => (
+                    ErpInfo.languages.map((element: any, key: any) => (
                         <Badge key={key} bg="secondary" className="me-1 p-2">{element}</Badge>
                     ))
                 }

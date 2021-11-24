@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import '../style/projects.scss'
 import ProjectCard from '../components/ProjectCard/ProjectCard';
-import { Project, SmartServiceInfo, erpInfo, patrimoineInfo, nuitDeLinfoInfo, FinEtudeInfo } from '../mock/projects';
+import { Project, SmartServiceInfo, ErpInfo, PatrimoineInfo, NuitDeLinfoInfo, FinEtudeInfo } from '../mock/projects';
 import SmartServiceProject from '../components/Projects/SmartServiceProject';
 import ErpProject from '../components/Projects/ErpProject';
 import PatrimoineProject from '../components/Projects/PatrimoineProject';
@@ -16,43 +16,56 @@ function ProjectsPage(){
   const [show, setVisibility] = useState(false);
   const [projectClickedDetail, setClickDetail] = useState<any>({});
 
-  useEffect(() => {
-    window.history.pushState(null, "", window.location.pathname);
-    window.addEventListener('popstate', (e) => {
-        setVisibility(false);
-        setClickDetail({});
-
-        window.history.pushState(null, "", window.location.pathname);
-      });
-  }, [])
-
   const projectList : Project[] =[
     {
         projectInfo: SmartServiceInfo,
         component: SmartServiceProject
     },
     {
-        projectInfo: erpInfo,
+        projectInfo: ErpInfo,
         component: ErpProject
     },
     {
-        projectInfo: patrimoineInfo,
+        projectInfo: PatrimoineInfo,
         component: PatrimoineProject
     },
     {
-        projectInfo: nuitDeLinfoInfo,
+        projectInfo: NuitDeLinfoInfo,
         component: NuitDeLinfoProject
     },
     {
         projectInfo: FinEtudeInfo,
         component: FinEtudeProject
     }
-];
+  ];
+
+  let previousPage:string = "";
+
+  const handleBackButtonClick = (e: any) => {
+    setVisibility(false);
+    setClickDetail({});
+  };
 
   const handleCardClick = (e: any, projectConcerned: any) => {
+    window.history.pushState(null, "", window.location.pathname);
+
     setVisibility(true);
     setClickDetail(projectConcerned);
   }
+
+  const handleHideOffcanvas = () => {
+    setVisibility(false); 
+    window.history.replaceState(null, "", previousPage);
+  }
+
+  useEffect(() => {
+    previousPage = document.referrer;
+    window.addEventListener('popstate', handleBackButtonClick);
+
+    return () => {
+      window.removeEventListener('popstate', handleBackButtonClick);
+    }
+  }, [])
 
   return (
     <Layout>
@@ -67,7 +80,7 @@ function ProjectsPage(){
             }
         </div>
 
-        <Offcanvas show={show} onHide={() => {setVisibility(false);}} placement="end" restoreFocus={false}>
+        <Offcanvas show={show} onHide={handleHideOffcanvas} placement="end" restoreFocus={false}>
           <Offcanvas.Header closeButton className="p-0">
             <p className="mb-0">Détails</p>
             <hr className="mb-4"/>
