@@ -21,7 +21,9 @@ function ProjectsPage(){
     window.addEventListener('popstate', (e) => {
         setVisibility(false);
         setClickDetail({});
-    });
+
+        window.history.pushState(null, "", window.location.pathname);
+      });
   }, [])
 
   const projectList : Project[] =[
