@@ -22,7 +22,7 @@ export const homeData: any = {
         {
             icon: TiThList,
             title: "Méthodes",
-            description: "Clean code, TDD, Unified Process",
+            description: "Agiles (SCRUM, XP), Software craftmanship",
         },
         {
             icon: GiRead,
@@ -56,12 +56,12 @@ export const homeData: any = {
             description: [
                 {
                     date: "En cours :",
-                    text: "Gestion d'un projet Informatique, développement d'un nouveau module intégré à Incovar+ (projet de fin d'études).",
-                    skills: ["Analyse concurrentielle", "Recueil du besoin", "Relation client", "Spécifications", "Méthodologies Gestion de Projet"],
+                    text: "Pilotage du projet de développement d’un nouveau module intégré à Incovar+ (sujet de mémoire).",
+                    skills: ["Analyse", "Recueil du besoin", "Relation client", "Spécifications", "Développements logiciel", "Méthodes agiles", "Software craftmanship"],
                 },
                 {
                     date: "2020 - 2021 :",
-                    text: "Responsable de la réécriture d'une application mobile existante (gestion des temps).",
+                    text: "Chargée de la conception, réalisation, maintenance et déploiement de l’application mobile SmartService (partie gestion des temps).",
                     skills: ["Développements mobile", "Management", "Analyse fonctionnelle", "UI/UX", "Analyse technique", "Mise en production"],
                     button: {
                         href: "https://www.incotec-software.com/actualite/smartservice-la-seule-application-mobile-dediee-la-gestion-des-temps-de-travail-et-des",

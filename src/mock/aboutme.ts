@@ -179,15 +179,15 @@ export const aboutData: any = {
                     location: "Incotec",
                     desc: [
                         {
-                            text: "Responsable de la réécriture d'une application web en application mobile Android et iOS disponible sur Google Play et l'App Store (Ionic, ASP.NET MVC).",
-                            detail: "Amélioration de l'interface utilisateur (ergonomie et design), développement de nouvelles fonctionnalités (mode déconnecté, notifications mobiles via serveur push...), orcherstration d'une phase de test, mise en production."
+                            text: "Chargée de la conception, réalisation, maintenance et déploiement de l’application mobile SmartService partie gestion des temps. Disponible sur le Play Store et l'App Store (Ionic, ASP.NET MVC).",
+                            detail: "Conception de l'interface utilisateur en collaboration avec d'autres équipes (ergonomie et design), développements (fonctionnalités de gestion de temps, mode déconnecté, notifications mobiles via serveur push...), orcherstration d'une phase de test, mise en production."
                         },
                         {
-                            text: "<strong>[en cours]</strong> Projet de fin d'étude : développement d'un nouveau module intégré au logiciel Incovar+.",
-                            detail: "Phase d'analyse : étude de la concurrence, analyse du besoin, animation des réunions, relations clients, "+ 
-                            "élaboration du cahier des charges fonctionnels et techniques. <br/>"+
-                            "Phase de conception : UX/UI, ergonomie <br/>"+
-                            "Phase de développement : réalisation et gestion<br/>"
+                            text: "<strong>[en cours]</strong> Pilotage du développement d'un nouveau module intégré au logiciel Incovar+.",
+                            detail: "Phase d'analyse préliminaire: étude de la concurrence, analyse du besoin, animation des réunions, relations clients, "+ 
+                            "Conception : UX/UI, ergonomie, UML <br/>"+
+                            "Développements : client, serveur, base de données<br/>" +
+                            "Gestion de projet : méthodes agiles XP & SCRUM <br/>"
                         }
                     ]
                 },
