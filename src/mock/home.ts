@@ -7,7 +7,7 @@ import { RiBearSmileFill, RiTeamFill } from "react-icons/ri";
 import { TiThList } from "react-icons/ti";
 
 export const homeData: any = {
-    title: "Ingénieure logiciel",
+    title: "Ingénieur logiciels",
     subtitle: "Étude, conception, développement et intégration de solutions informatiques",
     presentation_title: "Bonjour, je suis Marion !",
     presentation: "Actuellement en dernière année d'école d'ingénieurs, forte de mes 3 années d'expérience chez un éditeur de logiciels, je suis à l'écoute des opportunités.",
